@@ -10,10 +10,10 @@
 		9985B1C21BBB9D0100C988C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9985B1C11BBB9D0100C988C5 /* main.m */; };
 		9985B1C51BBB9D0100C988C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9985B1C41BBB9D0100C988C5 /* AppDelegate.m */; };
 		9985B1C81BBB9D0100C988C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9985B1C71BBB9D0100C988C5 /* ViewController.m */; };
-		9985B1CB1BBB9D0100C988C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9985B1C91BBB9D0100C988C5 /* Main.storyboard */; };
 		9985B1CD1BBB9D0100C988C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9985B1CC1BBB9D0100C988C5 /* Images.xcassets */; };
-		9985B1D01BBB9D0100C988C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9985B1CE1BBB9D0100C988C5 /* LaunchScreen.xib */; };
 		9985B1DC1BBB9D0100C988C5 /* WTHealthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9985B1DB1BBB9D0100C988C5 /* WTHealthTests.m */; };
+		9985B1E61BBB9E4100C988C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9985B1E51BBB9E4100C988C5 /* Default-568h@2x.png */; };
+		99C0F9B71BD7834E00E86B33 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C0F9B61BD7834E00E86B33 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +34,13 @@
 		9985B1C41BBB9D0100C988C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9985B1C61BBB9D0100C988C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9985B1C71BBB9D0100C988C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9985B1CA1BBB9D0100C988C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9985B1CC1BBB9D0100C988C5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9985B1CF1BBB9D0100C988C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9985B1D51BBB9D0100C988C5 /* WTHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9985B1DA1BBB9D0100C988C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9985B1DB1BBB9D0100C988C5 /* WTHealthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTHealthTests.m; sourceTree = "<group>"; };
+		9985B1E51BBB9E4100C988C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9985B1E91BBBA85500C988C5 /* WTHealth.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WTHealth.entitlements; sourceTree = "<group>"; };
+		99C0F9B61BD7834E00E86B33 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C0F9B71BD7834E00E86B33 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +65,7 @@
 		9985B1B31BBB9D0100C988C5 = {
 			isa = PBXGroup;
 			children = (
+				99C0F9B61BD7834E00E86B33 /* HealthKit.framework */,
 				9985B1BE1BBB9D0100C988C5 /* WTHealth */,
 				9985B1D81BBB9D0100C988C5 /* WTHealthTests */,
 				9985B1BD1BBB9D0100C988C5 /* Products */,
@@ -81,13 +84,13 @@
 		9985B1BE1BBB9D0100C988C5 /* WTHealth */ = {
 			isa = PBXGroup;
 			children = (
+				9985B1E91BBBA85500C988C5 /* WTHealth.entitlements */,
+				9985B1E51BBB9E4100C988C5 /* Default-568h@2x.png */,
 				9985B1C31BBB9D0100C988C5 /* AppDelegate.h */,
 				9985B1C41BBB9D0100C988C5 /* AppDelegate.m */,
 				9985B1C61BBB9D0100C988C5 /* ViewController.h */,
 				9985B1C71BBB9D0100C988C5 /* ViewController.m */,
-				9985B1C91BBB9D0100C988C5 /* Main.storyboard */,
 				9985B1CC1BBB9D0100C988C5 /* Images.xcassets */,
-				9985B1CE1BBB9D0100C988C5 /* LaunchScreen.xib */,
 				9985B1BF1BBB9D0100C988C5 /* Supporting Files */,
 			);
 			path = WTHealth;
@@ -168,6 +171,15 @@
 				TargetAttributes = {
 					9985B1BB1BBB9D0100C988C5 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = ZC5D86D8PK;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 					9985B1D41BBB9D0100C988C5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,9 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9985B1CB1BBB9D0100C988C5 /* Main.storyboard in Resources */,
-				9985B1D01BBB9D0100C988C5 /* LaunchScreen.xib in Resources */,
 				9985B1CD1BBB9D0100C988C5 /* Images.xcassets in Resources */,
+				9985B1E61BBB9E4100C988C5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,25 +254,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		9985B1C91BBB9D0100C988C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9985B1CA1BBB9D0100C988C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9985B1CE1BBB9D0100C988C5 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9985B1CF1BBB9D0100C988C5 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		9985B1DD1BBB9D0100C988C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -280,7 +272,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -302,6 +294,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -323,7 +316,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -338,6 +331,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -347,9 +341,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WTHealth/WTHealth.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WTHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickpos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -357,9 +357,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WTHealth/WTHealth.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WTHealth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.quickpos.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -416,6 +422,7 @@
 				9985B1E11BBB9D0100C988C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9985B1E21BBB9D0100C988C5 /* Build configuration list for PBXNativeTarget "WTHealthTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				9985B1E41BBB9D0100C988C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

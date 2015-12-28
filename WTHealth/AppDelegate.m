@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
+#import <HealthKit/HealthKit.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //判断是否打开健康应用
+    HKHealthStore *healthStore = [[HKHealthStore alloc]init];
+    
+    if (![HKHealthStore isHealthDataAvailable]) {
+        NSLog(@"未打开健康应用");
+    }
+    //这一步是根据需要来获得允许访问的数据类型
+    /* [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];//采用这个方法获取数据类型
+     这里只给出步数的类型
+     */
+    NSSet *writeSet = [NSSet setWithArray:[NSArray arrayWithObjects:[HKObjectType workoutType],[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount], [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning],nil]];
+    NSSet *readSet = [NSSet setWithArray:[NSArray arrayWithObjects:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount], [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning], nil]];
+    
+    //提示用户授权应用程序读取和保存给定类型的对象
+    [healthStore requestAuthorizationToShareTypes:nil readTypes:readSet completion:^(BOOL success, NSError * _Nullable error) {
+        if (!success) {
+            NSLog(@"error = %@",error.description);
+        }
+      }];
+    if ([healthStore authorizationStatusForType:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount]]) {
+        NSLog(@"允许共享这种类型数据");
+    }
+    ViewController *view = [[ViewController alloc]init];
+    self.window.rootViewController = view;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -35,6 +62,7 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
